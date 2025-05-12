@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Voice Not</string>
+    <string-array name="task_types">
+        <item>Select</item>
+        <item>Imp, Urgent</item>
+        <item>Imp, not-urgent</item>
+        <item>not-imp, urgent</item>
+        <item>not-imp, not-urgent</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Days of the Week Array -->
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
 </resources>

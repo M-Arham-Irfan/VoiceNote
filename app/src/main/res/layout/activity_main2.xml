@@ -1,0 +1,402 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/form_background">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollableContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLayout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Welcome Message Centered at the Top -->
+            <TextView
+                android:id="@+id/welcomeMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Voice Notify!"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/teal500"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:shadowColor="@color/teal500"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
+
+            <!-- Main Content Section: Form and Notes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Form Section on the Left -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/formContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <!-- Daily Routine Title -->
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter Your Weekly Routine"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp" />
+
+                        <!-- Time Picker -->
+                        <TimePicker
+                            android:id="@+id/timePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="170dp"
+                            android:timePickerMode="spinner"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/spinner_background" />
+
+                        <!-- Task Description Input -->
+                        <EditText
+                            android:id="@+id/taskDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Task Description"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:background="@color/blueGray"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Task Type Spinner -->
+                        <Spinner
+                            android:id="@+id/taskTypeSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:padding="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="10dp" />
+                        <!-- Day Selector Spinner -->
+                        <Spinner
+                            android:id="@+id/daySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:padding="10dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="10dp" />
+
+                        <!-- Submit Button -->
+                        <Button
+                            android:id="@+id/submitButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add Task"
+                            android:backgroundTint="@color/teal500"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:padding="12dp"
+                            android:layout_marginTop="12dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Notes Section on the Right -->
+                <LinearLayout
+                    android:id="@+id/notesContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="@color/white"
+                    android:layout_margin="8dp"
+                    app:cardElevation="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- Image Above the Notes -->
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/appimg1"
+                        android:scaleType="centerCrop"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Notes Box -->
+                    <EditText
+                        android:id="@+id/notesBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="315sp"
+                        android:hint="Write your notes here"
+                        android:inputType="textMultiLine"
+                        android:minLines="5"
+                        android:textColor="@color/black"
+                        android:background="@drawable/spinner_background"
+                        android:padding="10dp"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Horizontal Scrollable Task Table -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fillViewport="true">
+
+                <TableLayout
+                    android:id="@+id/taskTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1"
+                    android:padding="8dp"
+                    android:background="@color/white"
+                    android:divider="@android:color/darker_gray"
+                    android:showDividers="middle">
+
+                    <!-- Table Headers -->
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Type"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notes"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:textColor="@color/black" />
+
+                        <!-- Edit & Delete Buttons -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/editTaskButton"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/baseline_edit_note_24"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Edit Task"
+                                android:padding="4dp"/>
+
+                            <ImageButton
+                                android:id="@+id/deleteTaskButton"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:src="@drawable/baseline_delete_24"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Delete Task"
+                                android:padding="4dp"/>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <!-- Dynamic Rows will be added here -->
+                </TableLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Footer -->
+    <!-- Footer with Icons -->
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/teal500">
+
+        <!-- Today's Tasks Icon -->
+        <LinearLayout
+            android:id="@+id/todaysTasksLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/todaysTasksIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_today_24"
+                android:contentDescription="Today's Tasks" />
+
+            <TextView
+                android:id="@+id/todaysTasksText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Tasks"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- History Icon -->
+        <LinearLayout
+            android:id="@+id/historyLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/historyIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_history_24"
+                android:contentDescription="History" />
+
+            <TextView
+                android:id="@+id/historyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Suggestions Icon -->
+        <LinearLayout
+            android:id="@+id/suggestionsLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/suggestionsIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_all_inclusive_24"
+                android:contentDescription="Suggestions" />
+
+            <TextView
+                android:id="@+id/suggestionsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suggestions"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Forward Icon -->
+        <LinearLayout
+            android:id="@+id/forwardLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/forwardIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_cloud_24"
+                android:contentDescription="Forward" />
+
+            <TextView
+                android:id="@+id/forwardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Next"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Progress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/Progressicon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/progress"
+                android:contentDescription="Forward" />
+
+            <TextView
+                android:id="@+id/Progresstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Next"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

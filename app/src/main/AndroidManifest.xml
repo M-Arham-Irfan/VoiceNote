@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,18 +23,58 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VoiceNot"
         tools:targetApi="31">
-
         <activity
-            android:name=".Logo"
+            android:name=".Historyoftasks2"
+            android:exported="false" />
+        <activity
+            android:name=".Todaystasks2"
+            android:exported="false" /> <!-- Splash Screen as Launcher -->
+        <activity
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Splash"/>
-        <activity android:name=".MainActivity"/>
+        </activity> <!-- Login Screen -->
+        <activity
+            android:name=".Login"
+            android:exported="true" /> <!-- Home Screen -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" /> <!-- Weekly Tasks Screen -->
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GOOGLE_MAPS_API_KEY" />
+
+        <activity
+            android:name=".Suggestions"
+            android:exported="false" />
+        <activity
+            android:name=".WeatherTraffic"
+            android:exported="false" />
+        <activity
+            android:name=".Historyoftasks"
+            android:exported="false" />
+        <activity
+            android:name=".Todaytasks"
+            android:exported="false" />
+        <activity
+            android:name=".Logo"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+
+        <receiver
+            android:name=".TaskNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

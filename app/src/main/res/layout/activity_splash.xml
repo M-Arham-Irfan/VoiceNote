@@ -5,10 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/whatsapp_image_2024_10_18_at_4_18_28_am"
+    android:background="@drawable/splashimg2c"
 
-    tools:context=".Splash"
-    >
+    tools:context=".Splash">
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"

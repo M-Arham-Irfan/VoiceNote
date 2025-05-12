@@ -2,4 +2,84 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--  Primary Color  -->
+    <color name="colorPrimary">#3F51B5</color>
+    <!--  You can change this to any color you prefer  -->
+    <!--  Additional Colors  -->
+    <color name="blueGray">#607D8B</color>
+    >
+    <color name="colorPrimaryDark">#64B5F6</color>
+    <!--  Slightly Darker Blue  -->
+    <color name="colorAccent">#FFAB91</color>
+    <!--  Light Coral  -->
+    <!--  Neutral Colors  -->
+    <color name="lightGray">#F5F5F5</color>
+    <!--  Light Gray for Backgrounds  -->
+    <color name="mediumGray">#BDBDBD</color>
+    <!--  Gray for Text or Subtle Borders  -->
+    <!--  Text Colors  -->
+    <color name="darkGray">#757575</color>
+    <!--  Gray for Secondary Text  -->
+    <color name="lightText">#E0E0E0</color>
+    <!--  Light Text on Dark Backgrounds  -->
+    <!--  Extra Accent Colors  -->
+    <color name="lightGreen">#A5D6A7</color>
+    <!--  Soft Green  -->
+    <color name="lightPurple">#CE93D8</color>
+    <!--  Soft Purple  -->
+    <color name="lightYellow">#FFF59D</color>
+    <!--  Light Yellow  -->
+    <color name="lightPink">#F48FB1</color>
+    <!--  Soft Pink  -->
+    <color name="lightBlue50">#E3F2FD</color>
+    <!--  Very light blue  -->
+    <color name="lightBlue100">#BBDEFB</color>
+    <!--  Light blue  -->
+    <color name="lightBlue200">#90CAF9</color>
+    <!--  Soft blue  -->
+    <color name="lightBlue300">#64B5F6</color>
+    <!--  Slightly darker light blue  -->
+    <color name="lightBlue400">#42A5F5</color>
+    <!--  Bright blue  -->
+    <color name="lightBlue500">#2196F3</color>
+    <!--  Medium blue  -->
+    <color name="lightBlue600">#1E88E5</color>
+    <!--  Deeper blue  -->
+    <color name="lightBlue700">#1976D2</color>
+    <!--  Darker blue  -->
+    <color name="lightBlue800">#1565C0</color>
+    <!--  Rich blue  -->
+    <color name="lightBlue900">#0D47A1</color>
+    <!--  Dark blue  -->
+    <color name="green500">#4CAF50</color>
+    <!--  Medium Green  -->
+    <color name="green600">#388E3C</color>
+    <!--  Darker Medium Green  -->
+    <color name="green700">#2E7D32</color>
+    <!--  Dark Green  -->
+    <color name="lightGreen400">#A5D6A7</color>
+    <!--  Light Green  -->
+    <color name="lightGreen500">#8BC34A</color>
+    <!--  Bright Light Green  -->
+    <color name="lime500">#CDDC39</color>
+    <!--  Lime Green  -->
+    <color name="teal500">#009688</color>
+    <!--  Teal  -->
+    <color name="emerald">#50C878</color>
+    <!--  Emerald Green  -->
+    <color name="forestGreen">#228B22</color>
+    <!--  Forest Green  -->
+    <color name="oliveGreen">#808000</color>
+    <color name="lightBackground">#F9F9F9</color>
+    <color name="primaryText">#333333</color>
+    <color name="hintText">#AAAAAA</color>
+    <color name="buttonText">#FFFFFF</color>
+    <color name="linkText">#1976D2</color>
+    <color name="teal400">#26A69A</color> <!-- Lighter Teal -->
+    <color name="teal600">#00796B</color> <!-- Darker Teal -->
+    <color name="teal700">#004D40</color> <!-- More Intense Dark Teal -->
+    <color name="teal100">#B2DFDB</color> <!-- Light Teal -->
+    <color name="teal200">#80CBC4</color> <!-- Light Teal Shade -->
+    <color name="teal300">#4DB6AC</color> <!-- Lighter Teal with less saturation -->
 </resources>

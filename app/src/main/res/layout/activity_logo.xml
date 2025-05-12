@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/whatsapp_image_2024_10_18_at_5_13_26_am"
+    android:background="@drawable/dall_e_2024_11_18_21_19_28___a_sleek_and_modern_app_logo_for_a_voice_notification_app__the_logo_features_a_stylized_smartphone_emitting_sound_waves__symbolizing_voice_notification"
 
     tools:context=".Logo"
     >

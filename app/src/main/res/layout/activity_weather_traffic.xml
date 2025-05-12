@@ -1,0 +1,61 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/moreoptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More Options!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal500"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Weather Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allow Weather Updates"
+        android:textSize="20dp"
+        android:layout_marginBottom="8dp"/>
+
+    <Switch
+        android:id="@+id/weatherSwitch"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:id="@+id/weatherTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather updates will appear here"
+        android:textSize="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Traffic Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allow Traffic Updates"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <Switch
+        android:id="@+id/trafficSwitch"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:id="@+id/trafficTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Traffic updates will appear here"
+        android:textSize="16dp"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

@@ -1,0 +1,113 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/appimg1" />
+
+    <!-- Light Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90FFFFFF" /> <!-- Semi-transparent white overlay -->
+
+    <!-- Signup Form -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:elevation="4dp"
+            android:layout_gravity="center">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/signUpTitle"
+                android:text="Sign Up"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+            <!-- Username Input -->
+            <EditText
+                android:id="@+id/usernameInput"
+                android:hint="Username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/lightGreen400"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <!-- Password Input -->
+            <EditText
+                android:id="@+id/passwordInput"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/spinner_background"
+                android:backgroundTint="@color/lightGreen400"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Confirm Password Input -->
+            <EditText
+                android:id="@+id/confirmPasswordInput"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/spinner_background"
+                android:backgroundTint="@color/lightGreen400"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Sign Up Button -->
+            <Button
+                android:id="@+id/signUpButton"
+                android:text="Sign Up"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/teal500"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <!-- Redirect to Login -->
+            <TextView
+                android:id="@+id/redirectToLogin"
+                android:text="Already have an account? Log in"
+                android:textSize="14sp"
+                android:textColor="@color/teal500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

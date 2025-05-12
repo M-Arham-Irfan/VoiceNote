@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1060758911385",
+    "project_id": "voicenotapp",
+    "storage_bucket": "voicenotapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060758911385:android:cebdc38741dbf48e36fb08",
+        "android_client_info": {
+          "package_name": "com.example.voicenot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4QgXf8QEUjIZ5UA6VWPjyGF2euJOJ5aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
